@@ -1,59 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Patient Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Patient Registration</title>
+    <!-- CSS Deliverables -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <h2>Online Patient Registration Form</h2>
-    <form action="#" method="POST">
-        <fieldset>
-            <legend>Patient Details</legend>
-            <label for="pname">Patient Name:</label>
-            <input type="text" id="pname" name="pname" placeholder="Enter Full Name" required autofocus><br><br>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header style="background-color: #0f5c73; padding: 18px 24px; border-bottom: 4px solid #0a3d4d; text-align: center;">
+            <h1 style="color: #ffe08a; margin: 0;">Clinical Diagnostics Portal</h1>
+        </header>
 
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" min="1" max="120" required><br><br>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="laboratory-tests.html">Laboratory Tests</a></li>
+                <li><a href="test-price-table.html">Price List</a></li>
+                <li><a href="patient-registration.html">Online Registration</a></li>
+                <li><a href="lab-map.html">Interactive Strip Map</a></li>
+                <li><a href="urine-report.html">AI Diagnostic Report</a></li>
+                <li><a href="gallery.html">Facilities Gallery</a></li>
+                <li><a href="test-details.html">Test Details</a></li>
+            </ul>
+        </nav>
 
-            <label>Gender:</label>
-            <input type="radio" id="male" name="gender" value="Male" required>
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female">Female</label><br><br>
+        <!-- Main Content Area -->
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Registration Instructions</h3>
+                    <ul>
+                        <li>Fill in accurate patient details.</li>
+                        <li>Select home or lab collection.</li>
+                        <li>Upload valid prescription if required.</li>
+                        <li>Confirmation SMS will be sent.</li>
+                    </ul>
+                </div>
+            </aside>
 
-            <label for="mobile">Mobile Number:</label>
-            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit number" required><br><br>
+            <main class="content">
+                <h2>Task 8: Online Patient Registration Form</h2>
+                
+                <!-- Task 8: Form UI styling with fieldset, legend, input focus/hover, submit button -->
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>Patient Demographics</legend>
+                        
+                        <label for="pname">Full Name:</label>
+                        <input type="text" id="pname" name="pname" placeholder="Enter Full Name" required autofocus>
 
-            <label for="email">Email ID:</label>
-            <input type="email" id="email" name="email" placeholder="example@mail.com"><br><br>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="120" placeholder="e.g. 25" required>
 
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" required><br><br>
-        </fieldset>
+                        <div style="margin-bottom: 16px;">
+                            <label>Gender:</label><br>
+                            <input type="radio" id="male" name="gender" value="Male" required>
+                            <label for="male" style="font-weight: normal; margin-right: 14px;">Male</label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female" style="font-weight: normal;">Female</label>
+                        </div>
 
-        <fieldset>
-            <legend>Test Booking Details</legend>
-            <label for="test">Test Selection:</label>
-            <select id="test" name="test" required>
-                <option value="">--Select Test--</option>
-                <option value="cbc">CBC</option>
-                <option value="urine">Routine Urine</option>
-                <option value="lft">LFT</option>
-            </select><br><br>
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit phone number" required>
 
-            <label for="appointment">Preferred Appointment Date:</label>
-            <input type="date" id="appointment" name="appointment" required><br><br>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com">
 
-            <label for="sample">Sample Collection Preference:</label>
-            <input type="radio" id="home" name="sample" value="Home" required> <label for="home">Home Collection</label>
-            <input type="radio" id="lab" name="sample" value="Lab"> <label for="lab">Visit Lab</label><br><br>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </fieldset>
 
-            <label for="prescription">Upload Doctor Prescription:</label>
-            <input type="file" id="prescription" name="prescription" accept=".pdf, .jpg, .png"><br><br>
-        </fieldset>
-        
-        <br>
-        <input type="submit" value="Register">
-        <input type="reset" value="Clear">
-    </form>
+                    <fieldset>
+                        <legend>Test & Appointment Booking</legend>
+                        
+                        <label for="test">Select Laboratory Test / Package:</label>
+                        <select id="test" name="test" required>
+                            <option value="">-- Select Test --</option>
+                            <option value="cbc">Complete Blood Count (CBC)</option>
+                            <option value="urine">Routine Urine Analysis (KJS-HC-03)</option>
+                            <option value="lft">Liver Function Test (LFT)</option>
+                            <option value="basic_pkg">Basic Health Check Package</option>
+                            <option value="exec_pkg">Executive Wellness Package</option>
+                        </select>
+
+                        <label for="appointment">Preferred Appointment Date:</label>
+                        <input type="date" id="appointment" name="appointment" required>
+
+                        <div style="margin-bottom: 16px;">
+                            <label>Sample Collection Preference:</label><br>
+                            <input type="radio" id="home" name="sample" value="Home" required> 
+                            <label for="home" style="font-weight: normal; margin-right: 14px;">Home Collection</label>
+                            <input type="radio" id="lab" name="sample" value="Lab"> 
+                            <label for="lab" style="font-weight: normal;">Visit Laboratory</label>
+                        </div>
+
+                        <label for="prescription">Upload Doctor Prescription (Optional):</label><br>
+                        <input type="file" id="prescription" name="prescription" accept=".pdf, .jpg, .png" style="margin-top: 6px;">
+                    </fieldset>
+
+                    <div style="text-align: center; margin-top: 10px;">
+                        <input type="submit" value="Submit Registration">
+                        <input type="reset" value="Clear Form">
+                    </div>
+                </form>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Clinical Laboratory Management Portal. K. J. Somaiya School of Engineering.</p>
+        </footer>
+    </div>
 </body>
 </html>
