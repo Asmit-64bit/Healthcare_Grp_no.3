@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Patient Registration</title>
-    <!-- CSS Deliverables -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="nav.css">
@@ -12,12 +11,9 @@
 </head>
 <body>
     <div class="page-wrapper">
-        <!-- Header -->
         <header style="background-color: #0f5c73; padding: 18px 24px; border-bottom: 4px solid #0a3d4d; text-align: center;">
             <h1 style="color: #ffe08a; margin: 0;">Clinical Diagnostics Portal</h1>
         </header>
-
-        <!-- Navigation Menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -28,10 +24,9 @@
                 <li><a href="urine-report.html">AI Diagnostic Report</a></li>
                 <li><a href="gallery.html">Facilities Gallery</a></li>
                 <li><a href="test-details.html">Test Details</a></li>
+                <li><a href="exp5-tasks.html">Exp 5 Tasks</a></li>
             </ul>
         </nav>
-
-        <!-- Main Content Area -->
         <div class="main-container">
             <aside class="sidebar">
                 <div class="sidebar-card">
@@ -44,21 +39,17 @@
                     </ul>
                 </div>
             </aside>
-
             <main class="content">
-                <h2>Task 8: Online Patient Registration Form</h2>
-                
-                <!-- Task 8: Form UI styling with fieldset, legend, input focus/hover, submit button -->
-                <form action="#" method="POST">
+                <h2>Online Patient Registration Form</h2>
+                <form id="registrationForm" action="#" method="POST" novalidate>
                     <fieldset>
                         <legend>Patient Demographics</legend>
-                        
                         <label for="pname">Full Name:</label>
                         <input type="text" id="pname" name="pname" placeholder="Enter Full Name" required autofocus>
-
+                        <label for="patientId">Patient ID:</label>
+                        <input type="text" id="patientId" name="patientId" placeholder="PAT-1234">
                         <label for="age">Age:</label>
-                        <input type="number" id="age" name="age" min="1" max="120" placeholder="e.g. 25" required>
-
+                        <input type="number" id="age" name="age" placeholder="e.g. 25" required>
                         <div style="margin-bottom: 16px;">
                             <label>Gender:</label><br>
                             <input type="radio" id="male" name="gender" value="Male" required>
@@ -66,20 +57,15 @@
                             <input type="radio" id="female" name="gender" value="Female">
                             <label for="female" style="font-weight: normal;">Female</label>
                         </div>
-
                         <label for="mobile">Mobile Number:</label>
-                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit phone number" required>
-
+                        <input type="tel" id="mobile" name="mobile" placeholder="10-digit phone number" required>
                         <label for="email">Email Address:</label>
                         <input type="email" id="email" name="email" placeholder="example@mail.com">
-
                         <label for="dob">Date of Birth:</label>
                         <input type="date" id="dob" name="dob" required>
                     </fieldset>
-
                     <fieldset>
                         <legend>Test & Appointment Booking</legend>
-                        
                         <label for="test">Select Laboratory Test / Package:</label>
                         <select id="test" name="test" required>
                             <option value="">-- Select Test --</option>
@@ -89,10 +75,8 @@
                             <option value="basic_pkg">Basic Health Check Package</option>
                             <option value="exec_pkg">Executive Wellness Package</option>
                         </select>
-
                         <label for="appointment">Preferred Appointment Date:</label>
                         <input type="date" id="appointment" name="appointment" required>
-
                         <div style="margin-bottom: 16px;">
                             <label>Sample Collection Preference:</label><br>
                             <input type="radio" id="home" name="sample" value="Home" required> 
@@ -100,23 +84,21 @@
                             <input type="radio" id="lab" name="sample" value="Lab"> 
                             <label for="lab" style="font-weight: normal;">Visit Laboratory</label>
                         </div>
-
                         <label for="prescription">Upload Doctor Prescription (Optional):</label><br>
                         <input type="file" id="prescription" name="prescription" accept=".pdf, .jpg, .png" style="margin-top: 6px;">
                     </fieldset>
-
-                    <div style="text-align: center; margin-top: 10px;">
+                    <div id="formMessage" style="margin-top: 15px;"></div>
+                    <div style="text-align: center; margin-top: 15px;">
                         <input type="submit" value="Submit Registration">
                         <input type="reset" value="Clear Form">
                     </div>
                 </form>
             </main>
         </div>
-
-        <!-- Footer -->
         <footer>
             <p>&copy; 2026 Clinical Laboratory Management Portal. K. J. Somaiya School of Engineering.</p>
         </footer>
     </div>
+    <script src="validation.js"></script>
 </body>
 </html>

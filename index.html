@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinical Laboratory Management System</title>
-    
-    <!-- Task 3: External CSS Link -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="nav.css">
-
-    <!-- Task 2: Internal CSS for Navigation Menu -->
     <style>
         nav ul {
             list-style-type: none;
@@ -19,11 +14,9 @@
             padding: 0;
             background-color: #0f5c73;
         }
-
         nav ul li {
             display: inline-block;
         }
-
         nav ul li a {
             display: inline-block;
             padding: 12px 18px;
@@ -31,7 +24,6 @@
             text-decoration: none;
             font-weight: 600;
         }
-
         nav ul li a:hover {
             text-decoration: underline;
             color: #ffe08a;
@@ -39,16 +31,12 @@
         }
     </style>
 </head>
-
 <body>
     <div class="page-wrapper">
-        <!-- Task 1: Style Homepage Header (Inline CSS) -->
         <header style="background-color: #0f5c73; padding: 22px 24px; border-bottom: 4px solid #0a3d4d; text-align: center;">
             <h1 style="color: #ffe08a; margin: 0 0 6px 0; font-family: 'Segoe UI', Arial, sans-serif;">Clinical Diagnostics Portal</h1>
             <p style="text-align: center; color: #ffffff; font-style: italic; margin: 0; font-size: 1.05rem;">Precision Diagnostics & AI-Enabled Health Insights</p>
         </header>
-
-        <!-- Navigation Menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -61,10 +49,7 @@
                 <li><a href="test-details.html">Test Details</a></li>
             </ul>
         </nav>
-
-        <!-- Task 9: Page Layout using CSS (Header, Sidebar, Content, Footer) -->
         <div class="main-container">
-            <!-- Task 4: Style Book / Lab Categories Sidebar (Sidebar Card) -->
             <aside class="sidebar">
                 <div class="sidebar-card">
                     <h3>Lab Categories</h3>
@@ -76,7 +61,6 @@
                         <li><a href="laboratory-tests.html">Health Packages</a></li>
                     </ul>
                 </div>
-
                 <div class="sidebar-card">
                     <h3>AI Diagnostic Tech</h3>
                     <p><strong>Urine Strip Reader (KJS-HC-03):</strong> Point-of-care 10-reagent pad colorimetry automated via Raspberry Pi camera.</p>
@@ -84,20 +68,14 @@
                     <p><a href="urine-report.html" style="color: #0f5c73; font-weight: bold;">View Sample AI Report &rarr;</a></p>
                 </div>
             </aside>
-
-            <!-- Main Content Area -->
             <main class="content">
-                <!-- Task 10: CSS Effects & Highlighting (Offer Box with @keyframes) -->
                 <div class="offer-box">
                     🎉 SPECIAL FESTIVE HEALTH DISCOUNT! Get 25% Off on Full Body Preventive Checkup Packages.
                 </div>
-
                 <section>
                     <h2>Welcome to Our Diagnostic Portal</h2>
                     <p>Our clinical laboratory provides automated diagnostic services, complete blood counts, urine analysis, and specialized medical testing with maximum accuracy and rapid reporting turnaround times.</p>
                 </section>
-
-                <!-- Task 5: Book / Health Package Cards Layout Using CSS Box Model -->
                 <section>
                     <h2>Featured Health Packages</h2>
                     <div class="package-container">
@@ -107,14 +85,12 @@
                             <div class="price">₹ 499</div>
                             <button onclick="location.href='patient-registration.html'">Book Now</button>
                         </div>
-
                         <div class="package-card">
                             <h4>Executive Wellness</h4>
                             <p>Includes LFT, KFT, Lipid Profile, Thyroid</p>
                             <div class="price">₹ 999</div>
                             <button onclick="location.href='patient-registration.html'">Book Now</button>
                         </div>
-
                         <div class="package-card">
                             <h4>Comprehensive Body</h4>
                             <p>Full 64 Parameter Test + Doctor Consultation</p>
@@ -125,12 +101,9 @@
                 </section>
             </main>
         </div>
-
-        <!-- Task 3: Common Footer Style -->
         <footer id="contact">
             <p>&copy; 2026 Clinical Laboratory Management Portal. K. J. Somaiya School of Engineering.</p>
         </footer>
     </div>
 </body>
-
 </html>

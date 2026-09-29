@@ -1,11 +1,8 @@
-/* Task 9: layout.css - Web Portal Page Layout (Header, Sidebar, Content, Footer) */
-
 .page-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
 .main-container {
     display: flex;
     flex: 1;
@@ -16,30 +13,24 @@
     width: 100%;
     box-sizing: border-box;
 }
-
 .sidebar {
     flex: 0 0 280px;
     box-sizing: border-box;
 }
-
 .content {
     flex: 1;
     min-width: 0;
     box-sizing: border-box;
 }
-
 footer {
     margin-top: auto;
     width: 100%;
     box-sizing: border-box;
 }
-
-/* Responsive breakpoint for smaller screens */
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column;
     }
-
     .sidebar {
         flex: 1 1 100%;
         width: 100%;

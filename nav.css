@@ -1,9 +1,7 @@
-/* Task 2: nav.css - Navigation Menu */
 nav {
     background-color: #0f5c73;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -12,11 +10,9 @@ nav ul {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 nav ul li {
     display: inline-block;
 }
-
 nav ul li a {
     display: inline-block;
     padding: 14px 20px;
@@ -25,14 +21,11 @@ nav ul li a {
     font-weight: 600;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 nav ul li a:hover {
     background-color: #147a99;
     color: #ffe08a;
     text-decoration: underline;
 }
-
-/* Task 6: Image Gallery Styling */
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +33,6 @@ nav ul li a:hover {
     justify-content: center;
     padding: 20px 0;
 }
-
 .gallery-container figure {
     margin: 0;
     text-align: center;
@@ -49,7 +41,6 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
-
 .gallery-container figure img {
     width: 280px;
     height: 190px;
@@ -58,13 +49,11 @@ nav ul li a:hover {
     border-radius: 6px;
     transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
-
 .gallery-container figure img:hover {
     transform: scale(1.08);
     border-color: #0f5c73;
     box-shadow: 0 8px 16px rgba(15, 92, 115, 0.25);
 }
-
 .gallery-container figcaption {
     margin-top: 8px;
     font-weight: 500;
